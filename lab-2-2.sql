@@ -9,4 +9,10 @@
 -- | 2020 | Chicago White Sox |
 -- +------+-------------------+
 
-
+SELECT name, year, park,
+CASE 
+    WHEN park = "Guaranteed Rate Field" THEN 1 ELSE 0
+    END AS played_at_GRF
+FROM teams
+WHERE park = "Guaranteed Rate Field"
+LIMIT 10;
