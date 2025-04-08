@@ -1,5 +1,13 @@
 -- How many teams played in the league in each year?
 
+SELECT year, count(id)
+FROM teams
+GROUP BY 1
+LIMIT 100;
+
+
+
+
 -- Expected result: 150 rows, ending with
 --
 -- | 2011 | 30       |
